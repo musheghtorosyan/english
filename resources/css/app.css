@@ -1,0 +1,63 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Manrope', 'Noto Sans Armenian', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Fraunces', 'Noto Serif Armenian', Georgia, serif;
+    --color-ink: #102033;
+    --color-ink-soft: #1c3a56;
+    --color-navy: #0b1b2b;
+    --color-paper: #f6f1e6;
+    --color-paper-soft: #fffaf1;
+    --color-gold: #c49a2d;
+    --color-gold-soft: #e8d39a;
+    --color-emerald: #0f7a58;
+    --color-mark: #16a34a;
+    --color-clay: #b85c38;
+}
+
+[x-cloak] { display: none !important; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+}
+
+.font-display {
+    font-family: var(--font-display);
+}
+
+.learned-card {
+    box-shadow: inset 3px 0 0 #16a34a;
+}
+
+.level-A1 { background: #dcfce7; color: #166534; }
+.level-A2 { background: #dbeafe; color: #1e40af; }
+.level-B1 { background: #fef9c3; color: #854d0e; }
+.level-B2 { background: #ffedd5; color: #9a3412; }
+.level-C1 { background: #ede9fe; color: #5b21b6; }
+.level-C2 { background: #fce7f3; color: #9d174d; }
+
+.auth-panel {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(196, 154, 45, 0.22), transparent 28%),
+        radial-gradient(circle at 80% 80%, rgba(15, 122, 88, 0.2), transparent 32%),
+        linear-gradient(160deg, #0b1b2b 0%, #16344f 100%);
+}
+
+.sidebar-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebar-link.active svg {
+    color: #e8d39a;
+}
